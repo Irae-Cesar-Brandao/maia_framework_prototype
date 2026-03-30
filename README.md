@@ -1,4 +1,8 @@
 Theoretical and Analytical Foundation of the MAIA Framework
+
+https://irae-cesar-brandao.github.io/maia_framework_prototype/
+
+
 The MAIA (Model of AI Literacy) Framework is proposed as an experimental and analytical system aimed at the meta-evaluation and architectural validation of generative artificial intelligence models. It emerges in response to the growing reliance on large-scale language models within educational and research contexts, where the apparent diversity of systems may obscure underlying epistemological convergence.
 
 Rather than evaluating isolated outputs in terms of correctness or performance, the MAIA Framework shifts the analytical focus toward the relational dynamics between multiple generative systems. In doing so, it enables the identification of patterns of convergence, redundancy, and divergence across outputs, thereby providing a basis for examining the structural behavior of distinct model architectures through their linguistic productions.
