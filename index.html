@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAIA Framework Prototype</title>
+
+<!-- ================
+CSS STYLE 
+===================-->
+<style>
+body { 
+font-family: 
+Arial; 
+padding: 20px; 
+background: black; 
+color: white; 
+}
+
+h1, h2 { 
+text-align:center; 
+color: yellow; 
+}
+
+p.author {
+ text-align:center; 
+font-weight:bold; 
+}
+
+textarea, input {
+ width: 100%; 
+margin: 10px 0; 
+padding: 
+8px; 
+background:#1e1e1e; 
+color:white; 
+border:1px solid #444; 
+}
+
+button { 
+padding: 10px; 
+margin: 
+5px; 
+cursor: 
+pointer; 
+background:#333; 
+color:white; 
+border:none; 
+}
+
+button:hover { 
+background:#555; 
+}
+
+.card {
+ background: #1e1e1e; 
+padding: 15px; 
+margin-top: 15px; 
+border-radius: 10px; 
+}
+
+table {
+ width: 100%; 
+border-collapse: collapse; 
+}
+
+th, td { 
+border: 1px solid #444; 
+padding: 6px; }
+th { background: #222; 
+}
+
+.metric { 
+font-size: 18px; 
+margin:10px 0; 
+}
+
+.card h2 {
+  border-left: 4px solid #4fc3f7;
+  padding-left: 10px;
+}
+</style>
+
+
+</head>
+
+
+<body>
+<div class="card" style="position:sticky; top:0; z-index:1000;">
+  <nav style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+    <a href="#home"  style=" color: #ff5733;">Home</a>
+    <a href="#results"style=" color: #ff5733;">Results</a>
+    <a href="#tutorial" style=" color: #ff5733;">Tutorial</a>
+    <a href="#disclaimer" style="color: #ff5733;">Disclaimer</a>
+  </nav>
+</div>
+
+<h1 style="font-size: 48px;">   <img src="simbolo_maia.jpg" alt="Logo" class="header-image"> "MAIA" Framework Prototype</h1>
+<h2>(Model of AI Literacy)</h2>
+<p class="author"><i>Authors:</i> Iraê César Brandão <i>and</i> Soumita Sarkar | 03-2026</p>
+
+
+<div class="card" id="home">
+<hr><hr>
+ <h2>Theoretical and Analytical Foundation of the MAIA Framework</h2>
+<hr><hr>
+
+  <p>
+    The MAIA (Model of AI Literacy) Framework is proposed as an experimental and analytical system aimed at the meta-evaluation and architectural validation of generative artificial intelligence models. It emerges in response to the growing reliance on large-scale language models within educational and research contexts, where the apparent diversity of systems may obscure underlying epistemological convergence.
+  </p>
+
+  <p>
+    Rather than evaluating isolated outputs in terms of correctness or performance, the MAIA Framework shifts the analytical focus toward the relational dynamics between multiple generative systems. In doing so, it enables the identification of patterns of convergence, redundancy, and divergence across outputs, thereby providing a basis for examining the structural behavior of distinct model architectures through their linguistic productions.
+  </p>
+
+  <p>
+    Central to this framework is the concept of <strong>monocentric dependency</strong>, here theorized as <strong>“CHAT-GPTlogy”</strong>, which refers to the tendency of different generative systems to reproduce semantically aligned responses, reinforcing a dominant epistemic structure while simulating diversity. This phenomenon raises critical concerns regarding the formation of knowledge, particularly in pedagogical environments where such systems are increasingly integrated.
+  </p>
+
+  <p>
+    To operationalize this analysis, the system introduces two core metrics: the <strong>Monocentric Dependency Index (IDM)</strong>, which quantifies the degree of convergence among model outputs, and the <strong>Coefficient of Plurality (CPA)</strong>, which measures the extent of divergence and potential epistemic variability. These indicators are not intended as definitive measures of truth or quality, but as heuristic tools for exploring relational patterns within AI-generated content.
+  </p>
+
+  <p>
+    The MAIA Framework is particularly situated within the domain of ELT (English Language Teaching), where the integration of generative AI tools necessitates a critical approach to technological mediation in learning processes. By foregrounding plurality and encouraging comparative engagement with multiple systems, the framework seeks to foster a form of AI literacy grounded in epistemological awareness and methodological reflexivity.
+  </p>
+
+  <p>
+    As a browser-based prototype, this system enables localized experimentation, iterative data accumulation, and user-driven interpretation, positioning itself not as a closed evaluative instrument, but as an open, evolving environment for academic inquiry and conceptual development.
+  </p>
+  <p><strong>Academic Note:</strong><i> This tool is experimental and intended for research and prototyping in AI evaluation and literacy studies.</i></p>
+</div>
+
+
+
+
+
+<div class="card" id="imput">
+<hr>
+<h2>IMPUT</h2>
+<hr>
+
+<textarea id="prompt" placeholder="Insert prompt..."></textarea>
+<textarea id="outputA" placeholder="Model A output..."></textarea>
+<textarea id="outputB" placeholder="Model B output..."></textarea>
+<input id="idmInput" placeholder="Optional IDM">
+<input id="cpaInput" placeholder="Optional CPA">
+<button onclick="analyze()">Analyze</button>
+<button onclick="exportXML()">Export XML</button>
+<button onclick="exportTXT()">Export TXT</button>
+<button onclick="triggerImport()">Import XML</button>
+<button onclick="deleteSelected()">Delete Selected</button>
+<button onclick="clearAll()">Clear All</button>
+<input type="file" id="fileInput" style="display:none" />
+</div>
+
+<div class="card"  id="results">
+<hr>
+<h2>RESULTS</h2>
+<hr>
+
+<p></p>
+<p id="summary" class="metric"></p>
+<canvas id="chart"></canvas>
+</div>
+
+<div class="card">
+<h2>TABLE</h2>
+<table>
+<thead>
+<tr><th></th><th>#</th><th>Prompt</th><th>A</th><th>B</th><th>IDM</th><th>CPA</th></tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+
+
+<div class="card" id="tutorial">
+<hr>
+  <h2>System Limitations</h2>
+<hr>
+
+  <ul>
+    <li>This prototype uses a simplified similarity method based on word overlap, not deep semantic analysis.</li>
+    <li>Results may not accurately reflect true conceptual similarity between model outputs.</li>
+    <li>All data is stored locally in the browser and may be lost if cache is cleared.</li>
+    <li>No server-side validation or persistence is implemented.</li>
+    <li>Graphical visualization is basic and intended for exploratory analysis only.</li>
+    <li>Manual editing of values may introduce inconsistencies if not carefully validated.</li>
+    <li>The system does not prevent duplicated or biased inputs.</li>
+  </ul>
+</div>
+
+
+<div class="card" id="disclaimer">
+<hr>
+  <h2>Academic Disclaimer</h2>
+<hr>
+
+  <p>This tool is an experimental prototype developed for academic research purposes within the MAIA (Model of AI Literacy) framework.</p>
+
+  <p>Its primary objective is to support exploratory analysis of generative AI systems, particularly in relation to monocentric dependency (conceptualized as <strong>CHAT-GPTlogy</strong>), architectural plurality, and epistemological maturity in ELT contexts.</p>
+
+  <p>This system does not guarantee accuracy, validity, or reliability of the results produced.</p>
+
+  <p><strong>No responsibility is assumed for any interpretations, decisions, or conclusions derived from the use of this tool.</strong></p>
+
+  <p>The responsibility for evaluating, validating, and interpreting the results lies entirely with the researcher or user.</p>
+
+  <p>This prototype should not be used as a definitive analytical instrument, but rather as a support tool for experimental and methodological development.</p>
+</div>
+
+
+
+<!-- SCRIPT JS -->
+<script>
+function similarity(a,b){
+ let A=new Set(a.split(" "));
+ let B=new Set(b.split(" "));
+ let inter=[...A].filter(x=>B.has(x));
+ return inter.length/Math.max(A.size,1);
+}
+
+function analyze(){
+ let prompt=document.getElementById("prompt").value;
+ let a=document.getElementById("outputA").value;
+ let b=document.getElementById("outputB").value;
+
+ if(!prompt||!a||!b){ alert("Fill all fields"); return; }
+
+ let sim=similarity(a,b);
+ let IDM=document.getElementById("idmInput").value|| (sim*100).toFixed(2);
+ let CPA=document.getElementById("cpaInput").value|| ((1-sim)*100).toFixed(2);
+
+ let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
+ data.push({prompt,a,b,IDM,CPA});
+ localStorage.setItem("maia_tests",JSON.stringify(data));
+
+ document.getElementById("results").innerText=`IDM ${IDM}% | CPA ${CPA}%`;
+
+ document.getElementById("prompt").value="";
+ document.getElementById("outputA").value="";
+ document.getElementById("outputB").value="";
+ document.getElementById("idmInput").value="";
+ document.getElementById("cpaInput").value="";
+
+ update();
+}
+
+function update(){
+ let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
+ let tbody=document.getElementById("tbody");
+ tbody.innerHTML="";
+
+ let totalIDM=0, totalCPA=0;
+
+ data.forEach((d,i)=>{
+  totalIDM+=parseFloat(d.IDM);
+  totalCPA+=parseFloat(d.CPA);
+
+  let tr=document.createElement("tr");
+  tr.innerHTML=`
+  <td><input type='checkbox' data-i='${i}'></td>
+  <td>${i+1}</td>
+  <td contenteditable onblur="edit(${i},'prompt',this.innerText)">${d.prompt}</td>
+  <td contenteditable onblur="edit(${i},'a',this.innerText)">${d.a}</td>
+  <td contenteditable onblur="edit(${i},'b',this.innerText)">${d.b}</td>
+  <td contenteditable onblur="edit(${i},'IDM',this.innerText)">${d.IDM}</td>
+  <td contenteditable onblur="edit(${i},'CPA',this.innerText)">${d.CPA}</td>`;
+  tbody.appendChild(tr);
+ });
+
+ let avgIDM=(data.length? totalIDM/data.length:0).toFixed(2);
+ let avgCPA=(data.length? totalCPA/data.length:0).toFixed(2);
+
+ document.getElementById("summary").innerText=`Average IDM: ${avgIDM}% | Average CPA: ${avgCPA}%`;
+
+ draw(data);
+}
+
+function edit(i,f,v){
+ let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
+ data[i][f]=v.replace('%','');
+ localStorage.setItem("maia_tests",JSON.stringify(data));
+ update();
+}
+
+function draw(data){
+ let c=document.getElementById("chart");
+ let ctx=c.getContext("2d");
+ c.width=600; c.height=250;
+ ctx.clearRect(0,0,600,250);
+
+ data.forEach((d,i)=>{
+  let x=40+i*40;
+
+  ctx.fillStyle="#4fc3f7"; // IDM azul
+  ctx.fillRect(x,200-d.IDM*2,10,d.IDM*2);
+
+  ctx.fillStyle="#f44336"; // CPA vermelho
+  ctx.fillRect(x+12,200-d.CPA*2,10,d.CPA*2);
+
+  ctx.fillStyle="white";
+  ctx.fillText("T"+(i+1),x,220);
+ });
+}
+
+function exportXML(){
+ let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
+ let xml="<MAIA>";
+ data.forEach(d=>{
+  xml+=`<Test><prompt>${d.prompt}</prompt><A>${d.a}</A><B>${d.b}</B><IDM>${d.IDM}</IDM><CPA>${d.CPA}</CPA></Test>`;
+ });
+ xml+="</MAIA>";
+ let blob=new Blob([xml],{type:"application/xml"});
+ let link=document.createElement("a");
+ link.href=URL.createObjectURL(blob);
+ link.download="maia.xml";
+ link.click();
+}
+
+function exportTXT(){
+ let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
+ let txt="MAIA REPORT\n";
+ data.forEach((d,i)=>{
+  txt+=`Test ${i+1}: IDM ${d.IDM}% CPA ${d.CPA}%\n`;
+ });
+ let blob=new Blob([txt],{type:"text/plain"});
+ let link=document.createElement("a");
+ link.href=URL.createObjectURL(blob);
+ link.download="maia.txt";
+ link.click();
+}
+
+function triggerImport(){ document.getElementById("fileInput").click(); }
+
+document.getElementById("fileInput").addEventListener("change",function(e){
+ let file=e.target.files[0];
+ let reader=new FileReader();
+ reader.onload=function(){
+  let parser=new DOMParser();
+  let xml=parser.parseFromString(reader.result,"text/xml");
+  let tests=xml.getElementsByTagName("Test");
+  let data=[];
+  for(let t of tests){
+   data.push({
+    prompt:t.getElementsByTagName("prompt")[0].textContent,
+    a:t.getElementsByTagName("A")[0].textContent,
+    b:t.getElementsByTagName("B")[0].textContent,
+    IDM:t.getElementsByTagName("IDM")[0].textContent,
+    CPA:t.getElementsByTagName("CPA")[0].textContent
+   });
+  }
+  localStorage.setItem("maia_tests",JSON.stringify(data));
+  update();
+ };
+ reader.readAsText(file);
+});
+
+function deleteSelected(){
+ let checks=document.querySelectorAll("input[type=checkbox]:checked");
+ let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
+ let idx=[...checks].map(c=>parseInt(c.dataset.i));
+ data=data.filter((_,i)=>!idx.includes(i));
+ localStorage.setItem("maia_tests",JSON.stringify(data));
+ update();
+}
+
+function clearAll(){ localStorage.removeItem("maia_tests"); update(); }
+
+window.onload=update;
+</script>
+
+</div>
+
+</body>
+    <footer>
+        <p  style="text-align:center; font-size: 15px;"><a href="perfil-autor.html"  style="color: white;">© 2026 - Iraê César Brandão (DEV) Colab:Dr. Soumita Sarkar - all rights reserved</a></p>
+    </footer>
