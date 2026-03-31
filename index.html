@@ -81,27 +81,25 @@ margin:10px 0;
 }
 </style>
 
-
 </head>
-
 
 <body>
 <div class="card" style="position:sticky; top:0; z-index:1000;">
   <nav style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
     <a href="#home"  style=" color: #ff5733;">Home</a>
     <a href="#results"style=" color: #ff5733;">Results</a>
-    <a href="#tutorial" style=" color: #ff5733;">Tutorial</a>
+    <a href="#guide" style=" color: #ff5733;">Guide</a>
     <a href="#concepts" style=" color: #ff5733;">Concepts</a>
     <a href="#disclaimer" style="color: #ff5733;">Disclaimer</a>
   </nav>
 </div>"
 
-<h1 style="font-size: 48px;">   <img src="simbolo_maia.jpg" alt="Logo" class="header-image"> "MAIA" Framework Prototype</h1>
+<h1 style="font-size: 48px;"   id="home">   <img src="maia.jpg" alt="Logo" class="header-image" > "MAIA" Framework Prototype</h1>
 <h2>(Model of AI Literacy)</h2>
 <p class="author"><i>Authors:</i> Iraê César Brandão <i>and</i> Soumita Sarkar | 03-2026</p>
 
 
-<div class="card" id="home">
+<div class="card">
 <hr><hr>
  <h2>Theoretical and Analytical Foundation of the MAIA Framework</h2>
 <hr><hr>
@@ -165,8 +163,8 @@ margin:10px 0;
 <canvas id="chart"></canvas>
 </div>
 
-<div class="card">
-<h2>TABLE</h2>
+<div class="card" id="guide">
+<h2>METRICS</h2>
 <table>
 <thead>
 <tr><th></th><th>#</th><th>Prompt</th><th>A</th><th>B</th><th>IDM</th><th>CPA</th></tr>
@@ -176,42 +174,31 @@ margin:10px 0;
 </div>
 
 
-<div class="card" id="tutorial">
-<hr>
-  <h2>System Limitations</h2>
-<hr>
-
-  <ul>
-    <li>This prototype uses a simplified similarity method based on word overlap, not deep semantic analysis.</li>
-    <li>Results may not accurately reflect true conceptual similarity between model outputs.</li>
-    <li>All data is stored locally in the browser and may be lost if cache is cleared.</li>
-    <li>No server-side validation or persistence is implemented.</li>
-    <li>Graphical visualization is basic and intended for exploratory analysis only.</li>
-    <li>Manual editing of values may introduce inconsistencies if not carefully validated.</li>
-    <li>The system does not prevent duplicated or biased inputs.</li>
-  </ul>
-</div>
 
 <div class="card" id="concepts">
-<hr>
+<hr><hr>
   <h2>IDM/CPA Metrics Concepts and Interpretations</h2>
 <hr>
 
-<p>To operationalize this analysis, the system introduces two main metrics: the Monocentric Dependency Index (MDI), which quantifies the degree of convergence between the outputs of the models, and the Plurality Coefficient (CPA), which measures the extent of divergence and the potential epistemic variability between generated responses.
+<p>To operationalize this analysis, the system introduces two main metrics: the Monocentric Dependency Index (MDI), which quantifies the degree of convergence between the outputs of the models, and the Plurality Coefficient (CPA), which measures the extent of divergence and the potential epistemic variability between generated responses.</p>
 
-- The "IDM" can be understood as an indicator of the tendency of systems to produce structurally and semantically aligned responses, signaling possible zones of epistemological redundancy. 
-- The "CPA" acts as an analytical counterpoint, evidencing the presence of variation, conceptual displacement or discursive reconfiguration between the compared outputs.
+<ul>
+<li>The <b>IDM</b>: <i>can be understood as an indicator of the tendency of systems to produce structurally and semantically aligned responses, signaling possible zones of epistemological redundancy.</i></li>
+<li>The <b>CPA</b> :<i>acts as an analytical counterpoint, evidencing the presence of variation, conceptual displacement or discursive reconfiguration between the compared outputs.</i></li>
+</ul>
 
 <p>It is important to highlight that such metrics are not intended to establish normative criteria of truth, accuracy or quality. Instead, they operate as heuristic tools, whose function is to make visible relational patterns between textual productions of different systems, allowing the researcher to identify dynamics of convergence and divergence within generative ecosystems.</p>
 
 <p>The validation of the data produced by the system does not take place in an automated way, but depends on an interpretative analytical process conducted by the researcher. Such validation occurs through the critical observation of the outputs, considering elements such as:</p>
 
   <ul>
+<i>
   <li>recurrence of discursive structures; </li>
   <li>repetition of key concepts;</li>
   <li>argumentative alignment between different models;</li>
   <li>significant semantic variations;</li>
   <li>presence of epistemological displacements or conceptual reformulations.</li>
+</i>
 </ul>
 
 
@@ -222,8 +209,8 @@ margin:10px 0;
 <p>As a browser-based prototype, this system allows for localized experimentation, iterative accumulation of data, and user-driven interpretation, positioning itself not as a closed evaluative instrument, but as an open and constantly evolving environment for academic inquiry and conceptual development.</p>
 
 <hr>
-<h2>REFERENCES </h2>
-<hr>
+<h2>References </h2>
+<hr><h6>
 
 <p>CAMBRIDGE UNIVERSITY PRESS. Generative Artificial Intelligence and Language Teaching. Cambridge: CUP, 2025. Available at: https://www.cambridge.org/core/elements/abs/generative-artificial-intelligence-and-language-teaching/DD0BFB0E89E500723D033B1EEB025F01 . Accessed on: 30 Mar. 2026.</p>
 
@@ -236,7 +223,23 @@ margin:10px 0;
 <p>WOOD, D. Evaluating the impact of students' generative AI use in higher education. Emerald Publishing (2024), 152–170. Available at: https://doi.org/10.1108/JRIT-06-2024-0151 . Accessed on: 30 Mar. 2026.</p>
 
 <p>ZHANG, Chengzhi; MAGERKO, Brian. Generative AI Literacy: A Comprehensive Framework for Literacy and Responsible Use. Atlanta: Georgia Institute of Technology, 2025, pp. 1–14. https://doi.org/10.48550/arXiv.2504.19038.  Access on: 20 Mar. 2026.</p>
+</h6>
+</div>
 
+<div class="card" >
+<hr><hr>
+  <h2>System Limitations</h2>
+<hr>
+
+  <ul>
+    <li>This prototype uses a simplified similarity method based on word overlap, not deep semantic analysis.</li>
+    <li>Results may not accurately reflect true conceptual similarity between model outputs.</li>
+    <li>All data is stored locally in the browser and may be lost if cache is cleared.</li>
+    <li>No server-side validation or persistence is implemented.</li>
+    <li>Graphical visualization is basic and intended for exploratory analysis only.</li>
+    <li>Manual editing of values may introduce inconsistencies if not carefully validated.</li>
+    <li>The system does not prevent duplicated or biased inputs.</li>
+  </ul>
 </div>
 
 
