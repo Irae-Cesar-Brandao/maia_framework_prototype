@@ -6,7 +6,7 @@
 <title>MAIA Framework Prototype</title>
 
 <!-- ================
-CSS STYLE 
+         CSS STYLE 
 ===================-->
 <style>
 body { 
@@ -43,7 +43,7 @@ margin:
 5px; 
 cursor: 
 pointer; 
-background:#333; 
+background: green; 
 color:white; 
 border:none; 
 }
@@ -83,21 +83,34 @@ margin:10px 0;
 
 </head>
 
+
+<!--============== 
+        FRONT-END 
+============== -->
+
 <body>
-<div class="card" style="position:sticky; top:0; z-index:1000;">
-  <nav style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-    <a href="#home"  style=" color: #ff5733;">Home</a>
-    <a href="#results"style=" color: #ff5733;">Results</a>
-    <a href="#guide" style=" color: #ff5733;">Guide</a>
-    <a href="#concepts" style=" color: #ff5733;">Concepts</a>
-    <a href="#disclaimer" style="color: #ff5733;">Disclaimer</a>
+
+<!--============== 
+       TOP MENU
+============== -->
+
+<div class="card" style="position:sticky; top:0; z-index:1000; background-color: green;">
+  <nav style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;" style=" color: white;">
+    <a href="#home"        style=" color: white;">Home</a>
+    <a href="#results"     style=" color: white;">Results</a>
+    <a href="#guide"         style=" color: white;">Guide</a>
+    <a href="#concepts"   style=" color: white;">Concepts</a>
+    <a href="#disclaimer" style=" color: white;">Disclaimer</a>
   </nav>
-</div>"
+</div>
 
 <h1 style="font-size: 48px;"   id="home">   <img src="maia.jpg" alt="Logo" class="header-image" > "MAIA" Framework Prototype</h1>
 <h2>(Model of AI Literacy)</h2>
 <p class="author"><i>Authors:</i> Iraê César Brandão <i>and</i> Soumita Sarkar | 03-2026</p>
 
+<!--============== 
+     THEORY
+============== -->
 
 <div class="card">
 <hr><hr>
@@ -132,7 +145,9 @@ margin:10px 0;
 
 
 
-
+<!--============== 
+     FRAMEWORK
+============== -->
 
 <div class="card" id="imput">
 <hr>
@@ -152,6 +167,11 @@ margin:10px 0;
 <button onclick="clearAll()">Clear All</button>
 <input type="file" id="fileInput" style="display:none" />
 </div>
+
+
+<!--============== 
+   GRAFIC RESULTS
+============== -->
 
 <div class="card"  id="results">
 <hr>
@@ -175,6 +195,10 @@ margin:10px 0;
 
 
 
+<!--======================== 
+     GUIDE AND CONCEPTS
+========================== -->
+
 <div class="card" id="concepts">
 <hr><hr>
   <h2>IDM/CPA Metrics Concepts and Interpretations</h2>
@@ -191,7 +215,7 @@ margin:10px 0;
 
 <p>The validation of the data produced by the system does not take place in an automated way, but depends on an interpretative analytical process conducted by the researcher. Such validation occurs through the critical observation of the outputs, considering elements such as:</p>
 
-  <ul>
+<ul>
 <i>
   <li>recurrence of discursive structures; </li>
   <li>repetition of key concepts;</li>
@@ -201,7 +225,6 @@ margin:10px 0;
 </i>
 </ul>
 
-
 <p>The use of the framework implies an articulation between quantitative measurement (IDM/CPA) and qualitative interpretation, in which the researcher plays an active role in reading the data, either by analytical perception or by directed exploration of emerging concepts and structures during experimentation.</p>
 
 <p>The MAIA Framework is particularly situated in the field of teaching English as a foreign language (ELT), where the integration of generative AI tools requires a critical approach to technological mediation in learning processes. By privileging plurality and encouraging comparative engagement with multiple systems, the framework seeks to foster a form of AI literacy grounded in epistemological awareness and methodological reflexivity.</p>
@@ -210,7 +233,7 @@ margin:10px 0;
 
 <hr>
 <h2>References </h2>
-<hr><h6>
+<hr><h5>
 
 <p>CAMBRIDGE UNIVERSITY PRESS. Generative Artificial Intelligence and Language Teaching. Cambridge: CUP, 2025. Available at: https://www.cambridge.org/core/elements/abs/generative-artificial-intelligence-and-language-teaching/DD0BFB0E89E500723D033B1EEB025F01 . Accessed on: 30 Mar. 2026.</p>
 
@@ -223,8 +246,13 @@ margin:10px 0;
 <p>WOOD, D. Evaluating the impact of students' generative AI use in higher education. Emerald Publishing (2024), 152–170. Available at: https://doi.org/10.1108/JRIT-06-2024-0151 . Accessed on: 30 Mar. 2026.</p>
 
 <p>ZHANG, Chengzhi; MAGERKO, Brian. Generative AI Literacy: A Comprehensive Framework for Literacy and Responsible Use. Atlanta: Georgia Institute of Technology, 2025, pp. 1–14. https://doi.org/10.48550/arXiv.2504.19038.  Access on: 20 Mar. 2026.</p>
-</h6>
+</h5>
 </div>
+
+
+<!--============== 
+     LIMITATIONS
+============== -->
 
 <div class="card" >
 <hr><hr>
@@ -242,6 +270,11 @@ margin:10px 0;
   </ul>
 </div>
 
+
+
+<!--============== 
+    DISCLAIMER
+============== -->
 
 <div class="card" id="disclaimer">
 <hr>
@@ -262,7 +295,10 @@ margin:10px 0;
 
 
 
-<!-- SCRIPT JS -->
+<!--============== 
+     SCRIPT JS
+============== -->
+
 <script>
 function similarity(a,b){
  let A=new Set(a.split(" "));
@@ -422,8 +458,8 @@ window.onload=update;
 </script>
 
 </div>
-
 </body>
-    <footer>
-        <p  style="text-align:center; font-size: 15px;"><a href="perfil-autor.html"  style="color: white;">© 2026 - Iraê César Brandão (DEV) Colab:Dr. Soumita Sarkar - all rights reserved</a></p>
-    </footer>
+ <footer>
+       <p  style="text-align:center; font-size: 15px;"> © 2026 — Iraê César Brandão(Dev) and Dr. Soumita Sarkar (Collab./Researcher)- (Page for academic purposes.) — <a href="license.html" style="color: white;">Licença Acadêmica (AREUL)</a></p>
+  </footer>
+</html>
