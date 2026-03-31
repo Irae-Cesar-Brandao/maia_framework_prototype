@@ -3,121 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAIA Framework Prototype</title>
 
-<!-- ================
-         CSS STYLE 
-===================-->
+<title>MAIA Framework – Scientific Version</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!--============== 
+ CSS - STYLE
+============== -->
+
 <style>
+
 body { 
-font-family: 
-Arial; 
-padding: 20px; 
-background: black; 
-color: white; 
+background:#121212; 
+color:white; 
+
+}
+
+.card { 
+border-radius:12px; 
+}
+
+canvas { 
+background:#1e1e1e; 
+border-radius:10px; 
+}
+
+.selected {
+background-color: #00ffcc !important;
+color: black !important;
+font-weight: bold;
 }
 
 h1, h2 { 
 text-align:center; 
-color: yellow; 
+color: orange; 
 }
 
-p.author {
- text-align:center; 
-font-weight:bold; 
+h4 {
+color: orange; 
 }
 
-textarea, input {
- width: 100%; 
-margin: 10px 0; 
-padding: 
-8px; 
-background:#1e1e1e; 
-color:white; 
-border:1px solid #444; 
-}
-
-button { 
-padding: 10px; 
-margin: 
-5px; 
-cursor: 
-pointer; 
-background: green; 
-color:white; 
-border:none; 
-}
-
-button:hover { 
-background:#555; 
-}
-
-.card {
- background: #1e1e1e; 
+.card2 {
+background: #1e1e1e; 
+border-radius:12px; 
 padding: 15px; 
 margin-top: 15px; 
 border-radius: 10px; 
 }
 
+
+/*===================== 
+TABLE RESEARCHER-S INSTANCE
+====================== */
 table {
- width: 100%; 
-border-collapse: collapse; 
+width: 100%;
+border-collapse: collapse;
+margin-top: 30px;
+background: white;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+border-radius: 10px;
+overflow: hidden;
+color: black;
 }
 
-th, td { 
-border: 1px solid #444; 
-padding: 6px; }
-th { background: #222; 
+th {
+background: #2c3e50;
+color: white;
+padding: 15px;
+text-align: left;
 }
 
-.metric { 
-font-size: 18px; 
-margin:10px 0; 
+td {
+padding: 15px;
+border-bottom: 1px solid #ddd;
 }
 
-.card h2 {
-  border-left: 4px solid #4fc3f7;
-  padding-left: 10px;
+tr:hover {
+background: #f1f1f1;
 }
+
+.section-title {
+font-weight: bold;
+color: #34495e;
+}
+
 </style>
+
 
 </head>
 
-
 <!--============== 
-        FRONT-END 
+    FRONT-END 
 ============== -->
 
 <body>
 
 <!--============== 
-       TOP MENU
+     TOP MENU
 ============== -->
 
 <div class="card" style="position:sticky; top:0; z-index:1000; background-color: green;">
   <nav style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;" style=" color: white;">
-    <a href="#home"        style=" color: white;">Home</a>
-    <a href="#results"     style=" color: white;">Results</a>
-    <a href="#guide"         style=" color: white;">Guide</a>
-    <a href="#concepts"   style=" color: white;">Concepts</a>
+    <a href="#home"       style=" color: white;">Home</a>
+    <a href="#results"    style=" color: white;">Results</a>
+    <a href="#guide"      style=" color: white;">Guide</a>
     <a href="#disclaimer" style=" color: white;">Disclaimer</a>
   </nav>
 </div>
 
-<h1 style="font-size: 48px;"   id="home">   <img src="maia.jpg" alt="Logo" class="header-image" > "MAIA" Framework Prototype</h1>
-<h2>(Model of AI Literacy)</h2>
-<p class="author"><i>Authors:</i> Iraê César Brandão <i>and</i> Soumita Sarkar | 03-2026</p>
+<div class="container mt-4">
+
+<h1 class="text-warning text-center" id="home"> <img src="maia.jpg" alt="Logo" class="header-image" style="margin-right: 40px;">   MAIA FRAMEWORK <br><h2>(Scientific Prototype - Model of AI Literacy)</h2></h1>
+
+<p class="author"><i>Authors:</i> Iraê César Brandão <i>and</i> Soumita Sarkar  |  03-2026</p>
+
 
 <!--============== 
      THEORY
 ============== -->
 
-<div class="card">
+<div class="card2">
 <hr><hr>
  <h2>Theoretical and Analytical Foundation of the MAIA Framework</h2>
 <hr><hr>
 
-  <p>
+  <p><h7>
     The MAIA (Model of AI Literacy) Framework is proposed as an experimental and analytical system aimed at the meta-evaluation and architectural validation of generative artificial intelligence models. It emerges in response to the growing reliance on large-scale language models within educational and research contexts, where the apparent diversity of systems may obscure underlying epistemological convergence.
   </p>
 
@@ -140,76 +152,123 @@ margin:10px 0;
   <p>
     As a browser-based prototype, this system enables localized experimentation, iterative data accumulation, and user-driven interpretation, positioning itself not as a closed evaluative instrument, but as an open, evolving environment for academic inquiry and conceptual development.
   </p>
-  <p><strong>Academic Note:</strong><i> This tool is experimental and intended for research and prototyping in AI evaluation and literacy studies.</i></p>
+  <p><strong>Academic Note:</strong><i> This tool is experimental and intended for research and prototyping in AI evaluation and literacy studies.</i></p></h7>
 </div>
 
+<!-- ===========
+      INPUT 
+============= -->
 
+<div class="card bg-dark mb-3">
+<div class="card-body">
 
-<!--============== 
-     FRAMEWORK
-============== -->
+<textarea class="form-control mb-2" id="prompt" placeholder="Prompt"></textarea>
+<textarea class="form-control mb-2" id="outputA" placeholder="Model A"></textarea>
+<textarea class="form-control mb-2" id="outputB" placeholder="Model B"></textarea>
 
-<div class="card" id="imput">
-<hr>
-<h2>IMPUT</h2>
-<hr>
-
-<textarea id="prompt" placeholder="Insert prompt..."></textarea>
-<textarea id="outputA" placeholder="Model A output..."></textarea>
-<textarea id="outputB" placeholder="Model B output..."></textarea>
-<input id="idmInput" placeholder="Optional IDM">
-<input id="cpaInput" placeholder="Optional CPA">
-<button onclick="analyze()">Analyze</button>
-<button onclick="exportXML()">Export XML</button>
-<button onclick="exportTXT()">Export TXT</button>
-<button onclick="triggerImport()">Import XML</button>
-<button onclick="deleteSelected()">Delete Selected</button>
-<button onclick="clearAll()">Clear All</button>
-<input type="file" id="fileInput" style="display:none" />
+<div class="row">
+<div class="col-md-6">
+<input class="form-control" id="idmInput" placeholder="IDM (optional)">
+</div>
+<div class="col-md-6">
+<input class="form-control" id="cpaInput" placeholder="CPA (optional)">
+</div>
 </div>
 
+<br>
 
-<!--============== 
-   GRAFIC RESULTS
-============== -->
+<button class="btn btn-success" onclick="saveData()">Save / Update</button>
+<button class="btn btn-danger" onclick="deleteSelected()">Delete Selected</button>
+<button class="btn btn-secondary" onclick="clearAll()">Clear All</button>
+<br><br>
+<button class="btn btn-info" onclick="exportXLS()">Export XLS</button>
+<button class="btn btn-success" onclick="exportXML()">Export XML</button>
+<button class="btn btn-warning" onclick="triggerImport()">Import XML</button>
 
-<div class="card"  id="results">
-<hr>
-<h2>RESULTS</h2>
-<hr>
-
-<p></p>
-<p id="summary" class="metric"></p>
-<canvas id="chart"></canvas>
+<input type="file" id="fileInput" style="display:none">
+</div>
 </div>
 
-<div class="card" id="guide">
-<h2>METRICS</h2>
-<table>
+<!-- ============
+   TABLE 
+============ -->
+
+<div class="card bg-dark mb-3"  id="results">
+<div class="card-body">
+
+<h2>Dataset</h2>
+
+<table class="table table-dark table-hover">
 <thead>
-<tr><th></th><th>#</th><th>Prompt</th><th>A</th><th>B</th><th>IDM</th><th>CPA</th></tr>
+<tr>
+<th>#</th>
+<th>Prompt</th>
+<th>IDM</th>
+<th>CPA</th>
+<th>Class</th>
+</tr>
 </thead>
 <tbody id="tbody"></tbody>
 </table>
+
+</div>
 </div>
 
+<!-- ==========
+     GRAPH 
+============= -->
 
+<h4>Graphic Results</h4>
+<div class="card bg-dark mb-3">
+<div class="card-body text-center">
+
+<h2>Scientific Scatter Plot (IDM vs CPA)</h2>
+<canvas id="chart" width="500" height="300"></canvas>
+
+</div>
+</div>
+
+<!-- ============ 
+METHODOLOGY 
+=============== -->
 
 <!--======================== 
-     GUIDE AND CONCEPTS
+     GUIDE AND CONCEPTS 
 ========================== -->
 
-<div class="card" id="concepts">
+<div class="card2" id="guide">
 <hr><hr>
-  <h2>IDM/CPA Metrics Concepts and Interpretations</h2>
+  <h4>IDM/CPA Metrics Concepts and Interpretations</h4>
 <hr>
 
 <p>To operationalize this analysis, the system introduces two main metrics: the Monocentric Dependency Index (MDI), which quantifies the degree of convergence between the outputs of the models, and the Plurality Coefficient (CPA), which measures the extent of divergence and the potential epistemic variability between generated responses.</p>
 
 <ul>
-<li>The <b>IDM</b>: <i>can be understood as an indicator of the tendency of systems to produce structurally and semantically aligned responses, signaling possible zones of epistemological redundancy.</i></li>
-<li>The <b>CPA</b> :<i>acts as an analytical counterpoint, evidencing the presence of variation, conceptual displacement or discursive reconfiguration between the compared outputs.</i></li>
+<li>The <b>IDM (Monocentric Dependency Index)</b>: <i>can be understood as an indicator of the tendency of systems to produce structurally and semantically aligned responses, signaling possible zones of epistemological redundancy.</i></li>
+<li>The <b>CPA  (Coefficient of Plurality)</b> :<i>acts as an analytical counterpoint, evidencing the presence of variation, conceptual displacement or discursive reconfiguration between the compared outputs.</i></li>
 </ul>
+
+<p>
+This system operationalizes two analytical indicators:
+<strong>IDM</strong> and
+<strong>CPA</strong>.
+</p>
+
+<p>
+The analytical classification follows:
+</p>
+
+<ul>
+<li><b>Monocentric:</b> IDM ≥ 70</li>
+<li><b>Hybrid:</b> IDM between 40–69</li>
+<li><b>Plural:</b> IDM &lt; 40</li>
+</ul>
+
+<p>
+The scatter plot represents epistemological positioning:
+X-axis → IDM (convergence)  
+Y-axis → CPA (divergence)
+</p>
 
 <p>It is important to highlight that such metrics are not intended to establish normative criteria of truth, accuracy or quality. Instead, they operate as heuristic tools, whose function is to make visible relational patterns between textual productions of different systems, allowing the researcher to identify dynamics of convergence and divergence within generative ecosystems.</p>
 
@@ -231,9 +290,91 @@ margin:10px 0;
 
 <p>As a browser-based prototype, this system allows for localized experimentation, iterative accumulation of data, and user-driven interpretation, positioning itself not as a closed evaluative instrument, but as an open and constantly evolving environment for academic inquiry and conceptual development.</p>
 
+<!--===================== 
+ RESEARCHER-S INSTANCE
+====================== -->
 <hr>
-<h2>References </h2>
-<hr><h5>
+<h4>Researcher Procedure Guidelines</h4>
+<hr>
+<table>
+    <tr>
+        <th>Aspect</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+
+    <tr>
+        <td class="section-title">Researcher Attitude</td>
+        <td>
+            The researcher must act critically and objectively, avoiding premature conclusions.
+            Decisions should always be based on reliable and verifiable evidence.
+        </td>
+        <td>
+            Instead of accepting one source, compare multiple studies before forming a conclusion.
+        </td>
+    </tr>
+
+    <tr>
+        <td class="section-title">Ethical Awareness</td>
+        <td>
+            Maintain integrity in data handling, respect participants, and ensure proper citation.
+            Plagiarism and data manipulation must be avoided.
+        </td>
+        <td>
+            Always cite authors when using their ideas and never alter data to fit expectations.
+        </td>
+    </tr>
+
+    <tr>
+        <td class="section-title">Multiple Perspectives</td>
+        <td>
+            Consider different viewpoints and theories. A strong analysis includes contrasting opinions
+            to build a balanced understanding.
+        </td>
+        <td>
+            When studying social media, include both positive and negative research findings.
+        </td>
+    </tr>
+
+    <tr>
+        <td class="section-title">Analysis Process</td>
+        <td>
+            Follow a structured approach:
+            <ul>
+                <li>Careful reading</li>
+                <li>Pattern identification</li>
+                <li>Hypothesis creation</li>
+                <li>Critical review</li>
+            </ul>
+        </td>
+        <td>
+            Read articles, identify trends, propose explanations, and revise conclusions if needed.
+        </td>
+    </tr>
+
+</table>
+
+<!--============== 
+     LIMITATIONS
+============== -->
+<hr>
+  <h4>System Limitations</h4>
+<hr>
+
+  <ul>
+    <li>This prototype uses a simplified similarity method based on word overlap, not deep semantic analysis.</li>
+    <li>Results may not accurately reflect true conceptual similarity between model outputs.</li>
+    <li>All data is stored locally in the browser and may be lost if cache is cleared.</li>
+    <li>No server-side validation or persistence is implemented.</li>
+    <li>Graphical visualization is basic and intended for exploratory analysis only.</li>
+    <li>Manual editing of values may introduce inconsistencies if not carefully validated.</li>
+    <li>The system does not prevent duplicated or biased inputs.</li>
+  </ul>
+
+
+<hr>
+<h4>References </h4>
+<hr><h7>
 
 <p>CAMBRIDGE UNIVERSITY PRESS. Generative Artificial Intelligence and Language Teaching. Cambridge: CUP, 2025. Available at: https://www.cambridge.org/core/elements/abs/generative-artificial-intelligence-and-language-teaching/DD0BFB0E89E500723D033B1EEB025F01 . Accessed on: 30 Mar. 2026.</p>
 
@@ -246,36 +387,26 @@ margin:10px 0;
 <p>WOOD, D. Evaluating the impact of students' generative AI use in higher education. Emerald Publishing (2024), 152–170. Available at: https://doi.org/10.1108/JRIT-06-2024-0151 . Accessed on: 30 Mar. 2026.</p>
 
 <p>ZHANG, Chengzhi; MAGERKO, Brian. Generative AI Literacy: A Comprehensive Framework for Literacy and Responsible Use. Atlanta: Georgia Institute of Technology, 2025, pp. 1–14. https://doi.org/10.48550/arXiv.2504.19038.  Access on: 20 Mar. 2026.</p>
-</h5>
+</h7>
+
 </div>
 
 
 <!--============== 
-     LIMITATIONS
+  IMAGEM MAIA
 ============== -->
-
-<div class="card" >
-<hr><hr>
-  <h2>System Limitations</h2>
-<hr>
-
-  <ul>
-    <li>This prototype uses a simplified similarity method based on word overlap, not deep semantic analysis.</li>
-    <li>Results may not accurately reflect true conceptual similarity between model outputs.</li>
-    <li>All data is stored locally in the browser and may be lost if cache is cleared.</li>
-    <li>No server-side validation or persistence is implemented.</li>
-    <li>Graphical visualization is basic and intended for exploratory analysis only.</li>
-    <li>Manual editing of values may introduce inconsistencies if not carefully validated.</li>
-    <li>The system does not prevent duplicated or biased inputs.</li>
-  </ul>
+<div   style= "display: flex;   justify-content: center;  align-items: center;" >
+<img src="maia_img.jpg" alt="Descrição da imagem" width="300" height="300">
 </div>
+
 
 <!-- ===============
   SUGESTIONS APP
 ================-->
-<div class="card" id="disclaimer">
+
+<div class="card2">
 <hr>
-  <h2>SUGESTIONS (APP)</h2>
+  <h4>Sugestions (APP)</h4>
 <hr>
 <div style="width: 100%; font-family: Arial, sans-serif; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
 
@@ -352,9 +483,9 @@ margin:10px 0;
     DISCLAIMER
 ============== -->
 
-<div class="card" id="disclaimer">
+<div class="card2" id="disclaimer">
 <hr>
-  <h2>Academic Disclaimer</h2>
+  <h4>Academic Disclaimer</h4>
 <hr>
   <p>This tool is an experimental prototype developed for academic research purposes within the MAIA (Model of AI Literacy) framework.</p>
 
@@ -370,12 +501,17 @@ margin:10px 0;
 </div>
 
 
+</div>
+</div>
 
-<!--============== 
-     SCRIPT JS
-============== -->
+<!-- ============
+    SCRIPTS JS
+============= -->
 
 <script>
+
+let selectedIndex = null;
+
 function similarity(a,b){
  let A=new Set(a.split(" "));
  let B=new Set(b.split(" "));
@@ -383,159 +519,343 @@ function similarity(a,b){
  return inter.length/Math.max(A.size,1);
 }
 
-function analyze(){
- let prompt=document.getElementById("prompt").value;
- let a=document.getElementById("outputA").value;
- let b=document.getElementById("outputB").value;
+// CLASSIFICAÇÃO
+function classify(IDM, CPA){
 
- if(!prompt||!a||!b){ alert("Fill all fields"); return; }
+ IDM = parseFloat(IDM);
+ CPA = parseFloat(CPA);
 
- let sim=similarity(a,b);
- let IDM=document.getElementById("idmInput").value|| (sim*100).toFixed(2);
- let CPA=document.getElementById("cpaInput").value|| ((1-sim)*100).toFixed(2);
+ // Modelo mais "inteligente"
+ let score = (IDM*0.7) + ((100-CPA)*0.3);
 
- let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
- data.push({prompt,a,b,IDM,CPA});
+ if(score > 70) return "Monocentric";
+ if(score > 40) return "Hybrid";
+ return "Plural";
+}
+// SAVE OU UPDATE
+function saveData(){
+ let prompt = document.getElementById("prompt").value;
+ let a = document.getElementById("outputA").value;
+ let b = document.getElementById("outputB").value;
+
+ let idmManual = document.getElementById("idmInput").value;
+ let cpaManual = document.getElementById("cpaInput").value;
+
+ if(!prompt || !a || !b){
+  alert("Fill fields");
+  return;
+ }
+
+ let sim = similarity(a,b);
+
+ let IDM = idmManual ? parseFloat(idmManual) : sim*100;
+ let CPA = cpaManual ? parseFloat(cpaManual) : (1-sim)*100;
+
+ IDM = IDM.toFixed(2);
+ CPA = CPA.toFixed(2);
+
+ let data = JSON.parse(localStorage.getItem("maia_tests")||"[]");
+
+ if(selectedIndex !== null){
+  data[selectedIndex] = {prompt,a,b,IDM,CPA};
+  selectedIndex = null;
+ } else {
+  data.push({prompt,a,b,IDM,CPA});
+ }
+
  localStorage.setItem("maia_tests",JSON.stringify(data));
 
- document.getElementById("results").innerText=`IDM ${IDM}% | CPA ${CPA}%`;
+ clearInputs();
+ update();
+}
 
+// UPDATE TABLE
+function update(){
+ let data = JSON.parse(localStorage.getItem("maia_tests")||"[]");
+ let tbody = document.getElementById("tbody");
+
+ tbody.innerHTML="";
+
+ data.forEach((d,i)=>{
+  let tr=document.createElement("tr");
+
+  let cls = classify(parseFloat(d.IDM));
+
+  tr.innerHTML=`
+  <td>${i+1}</td>
+  <td>${d.prompt}</td>
+  <td>${d.IDM}</td>
+  <td>${d.CPA}</td>
+  <td>${cls}</td>`;
+
+  tr.onclick = () => selectRow(i);
+
+if(i === selectedIndex){
+ tr.classList.add("selected");
+ tr.style.border = "2px solid yellow";
+}
+
+  tbody.appendChild(tr);
+ });
+
+ draw(data);
+}
+
+// SELECIONAR
+function selectRow(i){
+ let data = JSON.parse(localStorage.getItem("maia_tests"));
+
+ let d = data[i];
+
+ document.getElementById("prompt").value = d.prompt;
+ document.getElementById("outputA").value = d.a;
+ document.getElementById("outputB").value = d.b;
+ document.getElementById("idmInput").value = d.IDM;
+ document.getElementById("cpaInput").value = d.CPA;
+
+ selectedIndex = i;
+ update();
+}
+
+// DELETE
+function deleteSelected(){
+ if(selectedIndex === null){
+  alert("Select a row");
+  return;
+ }
+
+ let data = JSON.parse(localStorage.getItem("maia_tests"));
+ data.splice(selectedIndex,1);
+
+ localStorage.setItem("maia_tests",JSON.stringify(data));
+
+ selectedIndex = null;
+ update();
+}
+
+// CLEAR ALL
+function clearAll(){
+ localStorage.removeItem("maia_tests");
+ selectedIndex = null;
+ update();
+}
+
+// LIMPAR INPUT
+function clearInputs(){
  document.getElementById("prompt").value="";
  document.getElementById("outputA").value="";
  document.getElementById("outputB").value="";
  document.getElementById("idmInput").value="";
  document.getElementById("cpaInput").value="";
-
- update();
 }
 
-function update(){
- let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
- let tbody=document.getElementById("tbody");
- tbody.innerHTML="";
-
- let totalIDM=0, totalCPA=0;
-
- data.forEach((d,i)=>{
-  totalIDM+=parseFloat(d.IDM);
-  totalCPA+=parseFloat(d.CPA);
-
-  let tr=document.createElement("tr");
-  tr.innerHTML=`
-  <td><input type='checkbox' data-i='${i}'></td>
-  <td>${i+1}</td>
-  <td contenteditable onblur="edit(${i},'prompt',this.innerText)">${d.prompt}</td>
-  <td contenteditable onblur="edit(${i},'a',this.innerText)">${d.a}</td>
-  <td contenteditable onblur="edit(${i},'b',this.innerText)">${d.b}</td>
-  <td contenteditable onblur="edit(${i},'IDM',this.innerText)">${d.IDM}</td>
-  <td contenteditable onblur="edit(${i},'CPA',this.innerText)">${d.CPA}</td>`;
-  tbody.appendChild(tr);
- });
-
- let avgIDM=(data.length? totalIDM/data.length:0).toFixed(2);
- let avgCPA=(data.length? totalCPA/data.length:0).toFixed(2);
-
- document.getElementById("summary").innerText=`Average IDM: ${avgIDM}% | Average CPA: ${avgCPA}%`;
-
- draw(data);
-}
-
-function edit(i,f,v){
- let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
- data[i][f]=v.replace('%','');
- localStorage.setItem("maia_tests",JSON.stringify(data));
- update();
-}
-
+// SCATTER PLOT
 function draw(data){
  let c=document.getElementById("chart");
  let ctx=c.getContext("2d");
- c.width=600; c.height=250;
- ctx.clearRect(0,0,600,250);
 
+ ctx.clearRect(0,0,c.width,c.height);
+
+ // Eixos
+ ctx.strokeStyle="white";
+ ctx.lineWidth=2;
+
+ ctx.beginPath();
+ ctx.moveTo(40,260);
+ ctx.lineTo(460,260); // eixo X
+ ctx.moveTo(40,260);
+ ctx.lineTo(40,20);   // eixo Y
+ ctx.stroke();
+
+ ctx.fillStyle="white";
+ ctx.font="10px Arial";
+
+ // Escala X (IDM)
+ for(let i=0;i<=100;i+=20){
+   let x=40+i*4;
+   ctx.fillText(i,x,275);
+   ctx.beginPath();
+   ctx.moveTo(x,260);
+   ctx.lineTo(x,255);
+   ctx.stroke();
+ }
+
+ // Escala Y (CPA)
+ for(let i=0;i<=100;i+=20){
+   let y=260-i*2;
+   ctx.fillText(i,10,y+3);
+   ctx.beginPath();
+   ctx.moveTo(40,y);
+   ctx.lineTo(45,y);
+   ctx.stroke();
+ }
+
+ // Labels
+ ctx.fillText("IDM → (Convergence)",200,295);
+ ctx.save();
+ ctx.translate(5,150);
+ ctx.rotate(-Math.PI/2);
+ ctx.fillText("CPA → (Divergence)",0,0);
+ ctx.restore();
+
+ // Pontos
  data.forEach((d,i)=>{
-  let x=40+i*40;
+  let IDM=parseFloat(d.IDM);
+  let CPA=parseFloat(d.CPA);
 
-  ctx.fillStyle="#4fc3f7"; // IDM azul
-  ctx.fillRect(x,200-d.IDM*2,10,d.IDM*2);
+  let x=40+IDM*4;
+  let y=260-CPA*2;
 
-  ctx.fillStyle="#f44336"; // CPA vermelho
-  ctx.fillRect(x+12,200-d.CPA*2,10,d.CPA*2);
+  let cls=classify(IDM);
 
+  if(cls==="Monocentric") ctx.fillStyle="red";
+  else if(cls==="Hybrid") ctx.fillStyle="yellow";
+  else ctx.fillStyle="cyan";
+
+  ctx.beginPath();
+  ctx.arc(x,y,6,0,Math.PI*2);
+  ctx.fill();
+
+  // label do ponto
   ctx.fillStyle="white";
-  ctx.fillText("T"+(i+1),x,220);
+  ctx.fillText("T"+(i+1),x+6,y-6);
  });
 }
 
-function exportXML(){
- let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
- let xml="<MAIA>";
- data.forEach(d=>{
-  xml+=`<Test><prompt>${d.prompt}</prompt><A>${d.a}</A><B>${d.b}</B><IDM>${d.IDM}</IDM><CPA>${d.CPA}</CPA></Test>`;
- });
- xml+="</MAIA>";
- let blob=new Blob([xml],{type:"application/xml"});
- let link=document.createElement("a");
- link.href=URL.createObjectURL(blob);
- link.download="maia.xml";
- link.click();
-}
+function exportXLS(){
+ let data = JSON.parse(localStorage.getItem("maia_tests")||"[]");
 
-function exportTXT(){
- let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
- let txt="MAIA REPORT\n";
+ let table = `
+ <table>
+ <tr>
+ <th>#</th><th>Prompt</th><th>A</th><th>B</th><th>IDM</th><th>CPA</th><th>Class</th>
+ </tr>`;
+
  data.forEach((d,i)=>{
-  txt+=`Test ${i+1}: IDM ${d.IDM}% CPA ${d.CPA}%\n`;
+  table += `<tr>
+   <td>${i+1}</td>
+   <td>${d.prompt}</td>
+   <td>${d.a}</td>
+   <td>${d.b}</td>
+   <td>${d.IDM}</td>
+   <td>${d.CPA}</td>
+   <td>${classify(parseFloat(d.IDM))}</td>
+  </tr>`;
  });
- let blob=new Blob([txt],{type:"text/plain"});
- let link=document.createElement("a");
- link.href=URL.createObjectURL(blob);
- link.download="maia.txt";
+
+ table += "</table>";
+
+ let blob = new Blob([table], {type:"application/vnd.ms-excel"});
+ let link = document.createElement("a");
+
+ link.href = URL.createObjectURL(blob);
+ link.download = "MAIA_dataset.xls";
  link.click();
 }
 
-function triggerImport(){ document.getElementById("fileInput").click(); }
+function triggerImport(){
+ document.getElementById("fileInput").click();
+}
 
 document.getElementById("fileInput").addEventListener("change",function(e){
- let file=e.target.files[0];
- let reader=new FileReader();
- reader.onload=function(){
-  let parser=new DOMParser();
-  let xml=parser.parseFromString(reader.result,"text/xml");
-  let tests=xml.getElementsByTagName("Test");
-  let data=[];
+
+ let file = e.target.files[0];
+ let reader = new FileReader();
+
+ reader.onload = function(){
+
+  let parser = new DOMParser();
+  let xml = parser.parseFromString(reader.result,"text/xml");
+  let tests = xml.getElementsByTagName("Test");
+
+  let data = [];
+
   for(let t of tests){
    data.push({
-    prompt:t.getElementsByTagName("prompt")[0].textContent,
-    a:t.getElementsByTagName("A")[0].textContent,
-    b:t.getElementsByTagName("B")[0].textContent,
-    IDM:t.getElementsByTagName("IDM")[0].textContent,
-    CPA:t.getElementsByTagName("CPA")[0].textContent
+    prompt: t.getElementsByTagName("prompt")[0].textContent,
+    a: t.getElementsByTagName("A")[0].textContent,
+    b: t.getElementsByTagName("B")[0].textContent,
+    IDM: t.getElementsByTagName("IDM")[0].textContent,
+    CPA: t.getElementsByTagName("CPA")[0].textContent
    });
   }
-  localStorage.setItem("maia_tests",JSON.stringify(data));
+
+  //  SUBSTITUI completamente (reprodutibilidade científica)
+  localStorage.setItem("maia_tests", JSON.stringify(data));
+
+  selectedIndex = null;
   update();
  };
+
  reader.readAsText(file);
 });
 
-function deleteSelected(){
- let checks=document.querySelectorAll("input[type=checkbox]:checked");
- let data=JSON.parse(localStorage.getItem("maia_tests")||"[]");
- let idx=[...checks].map(c=>parseInt(c.dataset.i));
- data=data.filter((_,i)=>!idx.includes(i));
- localStorage.setItem("maia_tests",JSON.stringify(data));
- update();
+
+function exportCSV(){
+ let data = JSON.parse(localStorage.getItem("maia_tests")||"[]");
+
+ let csv = "Test,Prompt,ModelA,ModelB,IDM,CPA,Class\n";
+
+ data.forEach((d,i)=>{
+  csv += `${i+1},"${d.prompt}","${d.a}","${d.b}",${d.IDM},${d.CPA},${classify(d.IDM,d.CPA)}\n`;
+ });
+
+ let blob = new Blob([csv], {type:"text/csv"});
+ let link = document.createElement("a");
+
+ link.href = URL.createObjectURL(blob);
+ link.download = "MAIA_dataset.csv";
+ link.click();
 }
 
-function clearAll(){ localStorage.removeItem("maia_tests"); update(); }
+function exportXML(){
 
+ let data = JSON.parse(localStorage.getItem("maia_tests") || "[]");
+
+ if(data.length === 0){
+  alert("No data to export");
+  return;
+ }
+
+ let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+ xml += `<MAIA>\n`;
+
+ data.forEach((d,i)=>{
+  xml += `  <Test id="${i+1}">\n`;
+  xml += `    <prompt>${escapeXML(d.prompt)}</prompt>\n`;
+  xml += `    <A>${escapeXML(d.a)}</A>\n`;
+  xml += `    <B>${escapeXML(d.b)}</B>\n`;
+  xml += `    <IDM>${d.IDM}</IDM>\n`;
+  xml += `    <CPA>${d.CPA}</CPA>\n`;
+  xml += `    <Class>${classify(d.IDM, d.CPA)}</Class>\n`;
+  xml += `  </Test>\n`;
+ });
+
+ xml += `</MAIA>`;
+
+ let blob = new Blob([xml], {type:"application/xml"});
+ let link = document.createElement("a");
+
+ link.href = URL.createObjectURL(blob);
+ link.download = "MAIA_dataset.xml";
+ link.click();
+}
+
+
+function escapeXML(str){
+ return str
+  .replace(/&/g, "&amp;")
+  .replace(/</g, "&lt;")
+  .replace(/>/g, "&gt;")
+  .replace(/"/g, "&quot;")
+  .replace(/'/g, "&apos;");
+}
 window.onload=update;
+
 </script>
 
-</div>
 </body>
  <footer>
-       <p  style="text-align:center; font-size: 15px;"> © 2026 — Iraê César Brandão(Dev) and Dr. Soumita Sarkar (Collab./Researcher)- (Page for academic purposes.) — <a href="license.html" style="color: white;">Licença Acadêmica (AREUL)</a></p>
+       <p  style="text-align:center; font-size: 12px;"> © 2026 — Iraê César Brandão (Dev) and Dr. Soumita Sarkar (Collab./Researcher)- (Page for academic purposes.) — <a href="license.html" style="color: white;">Licença Acadêmica (AREUL)</a></p>
   </footer>
 </html>
