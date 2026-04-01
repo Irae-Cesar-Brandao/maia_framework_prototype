@@ -614,7 +614,7 @@ function saveData(){
  update();
 }
 
-// UPDATE TABLE
+// UPDATE TABLE / SAVE
 function update(){
  let data = JSON.parse(localStorage.getItem("maia_tests")||"[]");
  let tbody = document.getElementById("tbody");
@@ -679,10 +679,14 @@ function deleteSelected(){
 }
 
 // CLEAR ALL
-function clearAll(){
- localStorage.removeItem("maia_tests");
- selectedIndex = null;
- update();
+ function clearAll(){
+  let confirmClear = confirm("Warning: All data will be permanently deleted. This action cannot be undone.");
+
+  if(!confirmClear) return;
+
+  localStorage.removeItem("maia_tests");
+  selectedIndex = null;
+  update();
 }
 
 // LIMPAR INPUT
