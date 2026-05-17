@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MAIA>
+
+  <Test id="1">
+    <prompt>Explain the importance of AI in education.</prompt>
+    <A>Artificial intelligence improves personalized learning and academic support.</A>
+    <B>Artificial intelligence enhances personalized learning experiences and supports students academically.</B>
+    <IDM>88.50</IDM>
+    <CPA>11.50</CPA>
+    <Class>Monocentric</Class>
+  </Test>
+
+  <Test id="2">
+    <prompt>Describe academic writing skills.</prompt>
+    <A>Academic writing requires clarity, structure, and critical reasoning.</A>
+    <B>Scholarly writing demands organization, precision, and analytical thinking.</B>
+    <IDM>74.20</IDM>
+    <CPA>25.80</CPA>
+    <Class>Monocentric</Class>
+  </Test>
+
+  <Test id="3">
+    <prompt>How does technology influence language learning?</prompt>
+    <A>Technology creates interactive environments for language acquisition.</A>
+    <B>Digital tools support vocabulary practice and learner engagement.</B>
+    <IDM>61.40</IDM>
+    <CPA>38.60</CPA>
+    <Class>Hybrid</Class>
+  </Test>
+
+  <Test id="4">
+    <prompt>Explain critical thinking in higher education.</prompt>
+    <A>Critical thinking promotes evidence-based argumentation.</A>
+    <B>University students develop reasoning through debate and analysis.</B>
+    <IDM>57.90</IDM>
+    <CPA>42.10</CPA>
+    <Class>Hybrid</Class>
+  </Test>
+
+  <Test id="5">
+    <prompt>What is AI literacy?</prompt>
+    <A>AI literacy involves understanding algorithms, ethics, and digital awareness.</A>
+    <B>Artificial intelligence literacy includes evaluating machine outputs critically.</B>
+    <IDM>49.80</IDM>
+    <CPA>50.20</CPA>
+    <Class>Hybrid</Class>
+  </Test>
+
+  <Test id="6">
+    <prompt>Describe collaborative learning.</prompt>
+    <A>Collaborative learning strengthens peer interaction and knowledge exchange.</A>
+    <B>Students working together create shared academic understanding.</B>
+    <IDM>43.60</IDM>
+    <CPA>56.40</CPA>
+    <Class>Hybrid</Class>
+  </Test>
+
+  <Test id="7">
+    <prompt>What are the risks of generative AI?</prompt>
+    <A>Generative systems may reproduce bias and misinformation.</A>
+    <B>Artificial models can challenge originality and authorship ethics.</B>
+    <IDM>35.70</IDM>
+    <CPA>64.30</CPA>
+    <Class>Plural</Class>
+  </Test>
+
+  <Test id="8">
+    <prompt>Explain digital identity.</prompt>
+    <A>Digital identity represents a user's online presence and interactions.</A>
+    <B>Virtual identity emerges from participation in online communities.</B>
+    <IDM>28.40</IDM>
+    <CPA>71.60</CPA>
+    <Class>Plural</Class>
+  </Test>
+
+  <Test id="9">
+    <prompt>How do students use AI tools?</prompt>
+    <A>Students use AI to summarize academic content.</A>
+    <B>Learners interact with intelligent systems for research exploration.</B>
+    <IDM>22.90</IDM>
+    <CPA>77.10</CPA>
+    <Class>Plural</Class>
+  </Test>
+
+  <Test id="10">
+    <prompt>What is epistemological diversity?</prompt>
+    <A>Knowledge diversity emerges through conflicting perspectives.</A>
+    <B>Epistemology can be shaped by plural interpretations of reality.</B>
+    <IDM>15.30</IDM>
+    <CPA>84.70</CPA>
+    <Class>Plural</Class>
+  </Test>
+
+</MAIA>
